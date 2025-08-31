@@ -1,0 +1,743 @@
+<Scene>
+	<GameObject name="Root" layer="0" active="1" tag="Common">
+		<Component name="Transform">
+			<Vector3 x="0.000000" y="0.000000" z="0.000000">LocalPosition</Vector3>
+			<Quaternion x="0.000000" y="0.000000" z="0.000000" w="1.000000">LocalRotation</Quaternion>
+			<Vector3 x="1.000000" y="1.000000" z="1.000000">LocalScale</Vector3>
+		</Component>
+		<GameObject name="MainCamera" layer="1" active="1" tag="Common">
+			<Component name="Transform">
+				<Vector3 x="999.345825" y="362.972931" z="-1002.713684">LocalPosition</Vector3>
+				<Quaternion x="-0.056462" y="0.003241" z="0.000182" w="0.998399">LocalRotation</Quaternion>
+				<Vector3 x="1.000000" y="1.000000" z="1.000000">LocalScale</Vector3>
+			</Component>
+			<Component name="Camera" CameraType="0" Depth="0" isMainCamera="1" RenderLayer="255">
+				<CameraParameter FOV="1.047197" Aspect="1.777778" Width="0.000000" Height="0.000000" NearClip="0.100000" FarClip="1000.000000"/>
+			</Component>
+			<Component name="CameraController"/>
+		</GameObject>
+		<GameObject name="UIMainCamera" layer="1" active="0" tag="Common">
+			<Component name="Transform">
+				<Vector3 x="1000.000000" y="360.000000" z="-110.000000">LocalPosition</Vector3>
+				<Quaternion x="0.000000" y="0.000000" z="0.000000" w="1.000000">LocalRotation</Quaternion>
+				<Vector3 x="1.000000" y="1.000000" z="1.000000">LocalScale</Vector3>
+			</Component>
+			<Component name="Camera" CameraType="1" Depth="1" isMainCamera="1" RenderLayer="2">
+				<CameraParameter FOV="0.000000" Aspect="0.000000" Width="1920.000000" Height="1080.000000" NearClip="0.100000" FarClip="100.000000"/>
+			</Component>
+		</GameObject>
+		<GameObject name="tankCamera" layer="1" active="1" tag="Common">
+			<Component name="Transform">
+				<Vector3 x="1000.000000" y="360.000000" z="-1000.000000">LocalPosition</Vector3>
+				<Quaternion x="0.000000" y="0.000000" z="0.000000" w="1.000000">LocalRotation</Quaternion>
+				<Vector3 x="0.100000" y="0.100000" z="0.100000">LocalScale</Vector3>
+			</Component>
+			<Component name="Camera" CameraType="0" Depth="0" isMainCamera="0" RenderLayer="1">
+				<CameraParameter FOV="1.047197" Aspect="1.777778" Width="0.000000" Height="0.000000" NearClip="0.100000" FarClip="1000.000000"/>
+			</Component>
+			<Component name="MeshFilter" MeshName="DefaultCube"/>
+			<Component name="MeshRenderer" ShaderName="debug" TextureName="">
+				<Color R="1.000000" G="1.000000" B="1.000000" Alpha="1.000000" BlendFactor="0.000000"/>
+			</Component>
+		</GameObject>
+		<GameObject name="UICamera" layer="1" active="1" tag="Common">
+			<Component name="Transform">
+				<Vector3 x="1000.000000" y="360.000000" z="-110.000000">LocalPosition</Vector3>
+				<Quaternion x="0.000000" y="0.000000" z="0.000000" w="1.000000">LocalRotation</Quaternion>
+				<Vector3 x="1.000000" y="1.000000" z="1.000000">LocalScale</Vector3>
+			</Component>
+			<Component name="Camera" CameraType="1" Depth="1" isMainCamera="0" RenderLayer="2">
+				<CameraParameter FOV="0.000000" Aspect="0.000000" Width="1920.000000" Height="1080.000000" NearClip="0.100000" FarClip="100.000000"/>
+			</Component>
+		</GameObject>
+		<GameObject name="TankRoot" layer="1" active="1" tag="Player">
+			<Component name="Transform">
+				<Vector3 x="978.079834" y="358.199890" z="-980.099976">LocalPosition</Vector3>
+				<Quaternion x="0.000000" y="0.866025" z="0.000000" w="0.500000">LocalRotation</Quaternion>
+				<Vector3 x="0.600000" y="0.600000" z="0.600000">LocalScale</Vector3>
+			</Component>
+			<Component name="ParticleSystem">
+				<ParticleParameter ParticleCount="5000" ParticleSpeed="1.000000" EmitAngle="30.000000" EmitPerFrame="3" LifeTimeSecond="1.500000" AirResistanceCoefficient="0.100000" RandomRadius="1.500000">
+					<Vector3 x="0.000000" y="6.000000" z="0.000000">Acceleration</Vector3>
+					<Vector2 x="3.000000" y="3.000000">RandomSize</Vector2>
+					<Color r="0.000000" g="1.000000" b="1.000000"/>
+				</ParticleParameter>
+				<ParticleRender TextureName="" MeshName="DefaultCube" ShaderName="ui"/>
+			</Component>
+			<GameObject name="TankParticle" layer="1" active="1" tag="Common">
+				<Component name="Transform">
+					<Vector3 x="-0.000000" y="-0.000000" z="-2.400002">LocalPosition</Vector3>
+					<Quaternion x="0.000000" y="0.000000" z="0.000000" w="1.000000">LocalRotation</Quaternion>
+					<Vector3 x="1.000000" y="1.100000" z="1.000000">LocalScale</Vector3>
+				</Component>
+				<Component name="ParticleSystem">
+					<ParticleParameter ParticleCount="5000" ParticleSpeed="1.000000" EmitAngle="10.000000" EmitPerFrame="3" LifeTimeSecond="1.000000" AirResistanceCoefficient="0.100000" RandomRadius="1.000000">
+						<Vector3 x="0.000000" y="5.000000" z="-10.000000">Acceleration</Vector3>
+						<Vector2 x="1.000000" y="5.000000">RandomSize</Vector2>
+						<Color r="0.000000" g="0.000000" b="0.000000"/>
+					</ParticleParameter>
+					<ParticleRender TextureName="" MeshName="DefaultCube" ShaderName="ui"/>
+				</Component>
+			</GameObject>
+			<GameObject name="TankBody" layer="1" active="1" tag="Common">
+				<Component name="Transform">
+					<Vector3 x="0.000000" y="-1.000000" z="0.000000">LocalPosition</Vector3>
+					<Quaternion x="0.000000" y="0.000000" z="0.000000" w="1.000000">LocalRotation</Quaternion>
+					<Vector3 x="1.000000" y="1.000000" z="1.000000">LocalScale</Vector3>
+				</Component>
+				<Component name="MeshFilter" MeshName="CommonBody"/>
+				<Component name="MeshRenderer" ShaderName="ui" TextureName="TankTex">
+					<Color R="1.000000" G="1.000000" B="1.000000" Alpha="1.000000" BlendFactor="0.000000"/>
+				</Component>
+			</GameObject>
+			<GameObject name="TankBattery" layer="1" active="1" tag="Common">
+				<Component name="Transform">
+					<Vector3 x="0.000000" y="-1.000000" z="0.000000">LocalPosition</Vector3>
+					<Quaternion x="0.000000" y="0.000000" z="0.000000" w="1.000000">LocalRotation</Quaternion>
+					<Vector3 x="1.000000" y="1.000000" z="1.000000">LocalScale</Vector3>
+				</Component>
+				<Component name="MeshFilter" MeshName="CommonBattery"/>
+				<Component name="MeshRenderer" ShaderName="ui" TextureName="TankTex">
+					<Color R="1.000000" G="1.000000" B="1.000000" Alpha="1.000000" BlendFactor="0.000000"/>
+				</Component>
+				<GameObject name="TankGun" layer="1" active="0" tag="Common">
+					<Component name="Transform">
+						<Vector3 x="-0.000000" y="1.900000" z="1.500000">LocalPosition</Vector3>
+						<Quaternion x="0.000000" y="0.000000" z="0.000000" w="1.000000">LocalRotation</Quaternion>
+						<Vector3 x="1.000000" y="1.000000" z="1.000000">LocalScale</Vector3>
+					</Component>
+					<Component name="MeshFilter" MeshName="AMBT_GUN"/>
+					<Component name="MeshRenderer" ShaderName="ui" TextureName="AMBT_GUN">
+						<Color R="1.000000" G="1.000000" B="1.000000" Alpha="1.000000" BlendFactor="0.000000"/>
+					</Component>
+				</GameObject>
+			</GameObject>
+			<GameObject name="TankTrack" layer="1" active="1" tag="Common">
+				<Component name="Transform">
+					<Vector3 x="0.000000" y="-1.000000" z="0.000000">LocalPosition</Vector3>
+					<Quaternion x="0.000000" y="0.000000" z="0.000000" w="1.000000">LocalRotation</Quaternion>
+					<Vector3 x="1.000000" y="1.000000" z="1.000000">LocalScale</Vector3>
+				</Component>
+				<Component name="MeshFilter" MeshName="CommonTrack"/>
+				<Component name="MeshRenderer" ShaderName="ui" TextureName="TankTrack">
+					<Color R="1.000000" G="1.000000" B="1.000000" Alpha="1.000000" BlendFactor="0.000000"/>
+				</Component>
+			</GameObject>
+		</GameObject>
+		<GameObject name="TankRoot3" layer="1" active="1" tag="Player">
+			<Component name="Transform">
+				<Vector3 x="1021.920227" y="358.199890" z="-980.099976">LocalPosition</Vector3>
+				<Quaternion x="-0.000000" y="-0.866025" z="0.000000" w="0.500000">LocalRotation</Quaternion>
+				<Vector3 x="0.600000" y="0.600000" z="0.600000">LocalScale</Vector3>
+			</Component>
+			<Component name="ParticleSystem">
+				<ParticleParameter ParticleCount="5000" ParticleSpeed="1.000000" EmitAngle="30.000000" EmitPerFrame="3" LifeTimeSecond="1.500000" AirResistanceCoefficient="0.100000" RandomRadius="1.500000">
+					<Vector3 x="0.000000" y="6.000000" z="0.000000">Acceleration</Vector3>
+					<Vector2 x="3.000000" y="3.000000">RandomSize</Vector2>
+					<Color r="0.000000" g="1.000000" b="1.000000"/>
+				</ParticleParameter>
+				<ParticleRender TextureName="" MeshName="DefaultCube" ShaderName="ui"/>
+			</Component>
+			<GameObject name="TankParticle" layer="1" active="1" tag="Common">
+				<Component name="Transform">
+					<Vector3 x="-0.000000" y="-0.000000" z="-2.400002">LocalPosition</Vector3>
+					<Quaternion x="0.000000" y="0.000000" z="0.000000" w="1.000000">LocalRotation</Quaternion>
+					<Vector3 x="1.000000" y="1.100000" z="1.000000">LocalScale</Vector3>
+				</Component>
+				<Component name="ParticleSystem">
+					<ParticleParameter ParticleCount="5000" ParticleSpeed="1.000000" EmitAngle="10.000000" EmitPerFrame="3" LifeTimeSecond="1.000000" AirResistanceCoefficient="0.100000" RandomRadius="1.000000">
+						<Vector3 x="0.000000" y="5.000000" z="-10.000000">Acceleration</Vector3>
+						<Vector2 x="1.000000" y="5.000000">RandomSize</Vector2>
+						<Color r="0.000000" g="0.000000" b="0.000000"/>
+					</ParticleParameter>
+					<ParticleRender TextureName="" MeshName="DefaultCube" ShaderName="ui"/>
+				</Component>
+			</GameObject>
+			<GameObject name="TankBody" layer="1" active="1" tag="Common">
+				<Component name="Transform">
+					<Vector3 x="0.000000" y="-1.000000" z="0.000000">LocalPosition</Vector3>
+					<Quaternion x="0.000000" y="0.000000" z="0.000000" w="1.000000">LocalRotation</Quaternion>
+					<Vector3 x="1.000000" y="1.000000" z="1.000000">LocalScale</Vector3>
+				</Component>
+				<Component name="MeshFilter" MeshName="AMBT_BODY"/>
+				<Component name="MeshRenderer" ShaderName="ui" TextureName="AMBT_BODY">
+					<Color R="1.000000" G="1.000000" B="1.000000" Alpha="1.000000" BlendFactor="0.000000"/>
+				</Component>
+			</GameObject>
+			<GameObject name="TankBattery" layer="1" active="1" tag="Common">
+				<Component name="Transform">
+					<Vector3 x="0.000000" y="-1.000000" z="0.000000">LocalPosition</Vector3>
+					<Quaternion x="0.000000" y="0.000000" z="0.000000" w="1.000000">LocalRotation</Quaternion>
+					<Vector3 x="1.000000" y="1.000000" z="1.000000">LocalScale</Vector3>
+				</Component>
+				<Component name="MeshFilter" MeshName="AMBT_TURRET"/>
+				<Component name="MeshRenderer" ShaderName="ui" TextureName="AMBT_TURRET">
+					<Color R="1.000000" G="1.000000" B="1.000000" Alpha="1.000000" BlendFactor="0.000000"/>
+				</Component>
+				<GameObject name="TankGun" layer="1" active="1" tag="Common">
+					<Component name="Transform">
+						<Vector3 x="-0.000000" y="1.900000" z="1.500000">LocalPosition</Vector3>
+						<Quaternion x="0.000000" y="0.000000" z="0.000000" w="1.000000">LocalRotation</Quaternion>
+						<Vector3 x="1.000000" y="1.000000" z="1.000000">LocalScale</Vector3>
+					</Component>
+					<Component name="MeshFilter" MeshName="AMBT_GUN"/>
+					<Component name="MeshRenderer" ShaderName="ui" TextureName="AMBT_GUN">
+						<Color R="1.000000" G="1.000000" B="1.000000" Alpha="1.000000" BlendFactor="0.000000"/>
+					</Component>
+				</GameObject>
+			</GameObject>
+			<GameObject name="TankTrack" layer="1" active="1" tag="Common">
+				<Component name="Transform">
+					<Vector3 x="0.000000" y="-1.000000" z="0.000000">LocalPosition</Vector3>
+					<Quaternion x="0.000000" y="0.000000" z="0.000000" w="1.000000">LocalRotation</Quaternion>
+					<Vector3 x="1.000000" y="1.000000" z="1.000000">LocalScale</Vector3>
+				</Component>
+				<Component name="MeshFilter" MeshName="AMBT_TRACK"/>
+				<Component name="MeshRenderer" ShaderName="ui" TextureName="AMBT_TRACK">
+					<Color R="1.000000" G="1.000000" B="1.000000" Alpha="1.000000" BlendFactor="0.000000"/>
+				</Component>
+			</GameObject>
+		</GameObject>
+		<GameObject name="TankRoot2" layer="1" active="1" tag="Player">
+			<Component name="Transform">
+				<Vector3 x="1000.000000" y="358.199890" z="-968.000000">LocalPosition</Vector3>
+				<Quaternion x="0.000000" y="1.000000" z="0.000000" w="0.000000">LocalRotation</Quaternion>
+				<Vector3 x="0.600000" y="0.600000" z="0.600000">LocalScale</Vector3>
+			</Component>
+			<Component name="ParticleSystem">
+				<ParticleParameter ParticleCount="5000" ParticleSpeed="1.000000" EmitAngle="30.000000" EmitPerFrame="3" LifeTimeSecond="1.500000" AirResistanceCoefficient="0.100000" RandomRadius="1.500000">
+					<Vector3 x="0.000000" y="6.000000" z="0.000000">Acceleration</Vector3>
+					<Vector2 x="3.000000" y="3.000000">RandomSize</Vector2>
+					<Color r="0.000000" g="1.000000" b="1.000000"/>
+				</ParticleParameter>
+				<ParticleRender TextureName="" MeshName="DefaultCube" ShaderName="ui"/>
+			</Component>
+			<GameObject name="TankParticle" layer="1" active="1" tag="Common">
+				<Component name="Transform">
+					<Vector3 x="-0.000000" y="-0.000000" z="-2.400002">LocalPosition</Vector3>
+					<Quaternion x="0.000000" y="0.000000" z="0.000000" w="1.000000">LocalRotation</Quaternion>
+					<Vector3 x="1.000000" y="1.100000" z="1.000000">LocalScale</Vector3>
+				</Component>
+				<Component name="ParticleSystem">
+					<ParticleParameter ParticleCount="5000" ParticleSpeed="1.000000" EmitAngle="10.000000" EmitPerFrame="3" LifeTimeSecond="1.000000" AirResistanceCoefficient="0.100000" RandomRadius="1.000000">
+						<Vector3 x="0.000000" y="5.000000" z="-10.000000">Acceleration</Vector3>
+						<Vector2 x="1.000000" y="5.000000">RandomSize</Vector2>
+						<Color r="0.000000" g="0.000000" b="0.000000"/>
+					</ParticleParameter>
+					<ParticleRender TextureName="" MeshName="DefaultCube" ShaderName="ui"/>
+				</Component>
+			</GameObject>
+			<GameObject name="TankBody" layer="1" active="1" tag="Common">
+				<Component name="Transform">
+					<Vector3 x="0.000000" y="-1.000000" z="0.000000">LocalPosition</Vector3>
+					<Quaternion x="0.000000" y="0.000000" z="0.000000" w="1.000000">LocalRotation</Quaternion>
+					<Vector3 x="1.000000" y="1.000000" z="1.000000">LocalScale</Vector3>
+				</Component>
+				<Component name="MeshFilter" MeshName="CommonBody"/>
+				<Component name="MeshRenderer" ShaderName="ui" TextureName="TankTex">
+					<Color R="1.000000" G="0.000000" B="0.000000" Alpha="1.000000" BlendFactor="0.300000"/>
+				</Component>
+			</GameObject>
+			<GameObject name="TankBattery" layer="1" active="1" tag="Common">
+				<Component name="Transform">
+					<Vector3 x="0.000000" y="-1.000000" z="0.000000">LocalPosition</Vector3>
+					<Quaternion x="0.000000" y="0.000000" z="0.000000" w="1.000000">LocalRotation</Quaternion>
+					<Vector3 x="1.000000" y="1.000000" z="1.000000">LocalScale</Vector3>
+				</Component>
+				<Component name="MeshFilter" MeshName="CommonBattery"/>
+				<Component name="MeshRenderer" ShaderName="ui" TextureName="TankTex">
+					<Color R="1.000000" G="0.000000" B="0.000000" Alpha="1.000000" BlendFactor="0.300000"/>
+				</Component>
+				<GameObject name="TankGun" layer="1" active="0" tag="Common">
+					<Component name="Transform">
+						<Vector3 x="-0.000000" y="1.900000" z="1.500000">LocalPosition</Vector3>
+						<Quaternion x="0.000000" y="0.000000" z="0.000000" w="1.000000">LocalRotation</Quaternion>
+						<Vector3 x="1.000000" y="1.000000" z="1.000000">LocalScale</Vector3>
+					</Component>
+					<Component name="MeshFilter" MeshName="AMBT_GUN"/>
+					<Component name="MeshRenderer" ShaderName="ui" TextureName="AMBT_GUN">
+						<Color R="1.000000" G="1.000000" B="1.000000" Alpha="1.000000" BlendFactor="0.000000"/>
+					</Component>
+				</GameObject>
+			</GameObject>
+			<GameObject name="TankTrack" layer="1" active="1" tag="Common">
+				<Component name="Transform">
+					<Vector3 x="0.000000" y="-1.000000" z="0.000000">LocalPosition</Vector3>
+					<Quaternion x="0.000000" y="0.000000" z="0.000000" w="1.000000">LocalRotation</Quaternion>
+					<Vector3 x="1.000000" y="1.000000" z="1.000000">LocalScale</Vector3>
+				</Component>
+				<Component name="MeshFilter" MeshName="CommonTrack"/>
+				<Component name="MeshRenderer" ShaderName="ui" TextureName="TankTrack">
+					<Color R="1.000000" G="0.000000" B="0.000000" Alpha="1.000000" BlendFactor="0.300000"/>
+				</Component>
+			</GameObject>
+		</GameObject>
+		<GameObject name="DefaultPlane" layer="1" active="1" tag="Common">
+			<Component name="Transform">
+				<Vector3 x="978.080017" y="357.099884" z="-980.099976">LocalPosition</Vector3>
+				<Quaternion x="0.000000" y="0.000000" z="0.000000" w="1.000000">LocalRotation</Quaternion>
+				<Vector3 x="200.000000" y="1.000000" z="200.000000">LocalScale</Vector3>
+			</Component>
+			<Component name="MeshFilter" MeshName="DefaultCube"/>
+			<Component name="MeshRenderer" ShaderName="ui" TextureName="Plane">
+				<Color R="1.000000" G="1.000000" B="1.000000" Alpha="1.000000" BlendFactor="0.000000"/>
+			</Component>
+		</GameObject>
+		<GameObject name="Canvas" layer="1" active="1" tag="Common">
+			<Component name="Transform">
+				<Vector3 x="1000.000000" y="360.000000" z="-100.000000">LocalPosition</Vector3>
+				<Quaternion x="0.000000" y="1.000000" z="0.000000" w="0.000000">LocalRotation</Quaternion>
+				<Vector3 x="1.000000" y="1.000000" z="1.000000">LocalScale</Vector3>
+			</Component>
+			<Component name="Canvas" Width="1920" Height="1080"/>
+			<Component name="UIController"/>
+			<Component name="AudioSource"/>
+			<GameObject name="NewGameButton" layer="2" active="1" tag="Common">
+				<Component name="RectTransform" Width="98.500000" Height="49.250000" PivotType="1">
+					<Vector3 x="0.000000" y="0.000000" z="0.000000">LocalPosition</Vector3>
+					<Quaternion x="0.000000" y="0.000000" z="0.000000" w="1.000000">LocalRotation</Quaternion>
+					<Vector3 x="1.000000" y="1.000000" z="1.000000">LocalScale</Vector3>
+					<Vector2 x="0.000000" y="110.000000">Pivot</Vector2>
+				</Component>
+				<Component name="Button" MeshName="Image" ShaderName="ui" TextureName="NewGame_en">
+					<Color R="1.000000" G="0.000000" B="1.000000" Alpha="1.000000" BlendFactor="0.300000"/>
+				</Component>
+			</GameObject>
+			<GameObject name="ChangeLanguageButton" layer="2" active="1" tag="Common">
+				<Component name="RectTransform" Width="97.500000" Height="49.250000" PivotType="1">
+					<Vector3 x="0.000000" y="0.000000" z="0.000000">LocalPosition</Vector3>
+					<Quaternion x="0.000000" y="0.000000" z="0.000000" w="1.000000">LocalRotation</Quaternion>
+					<Vector3 x="1.000000" y="1.000000" z="1.000000">LocalScale</Vector3>
+					<Vector2 x="0.000000" y="205.000000">Pivot</Vector2>
+				</Component>
+				<Component name="Button" MeshName="Image" ShaderName="ui" TextureName="ChangeLanguage_en">
+					<Color R="1.000000" G="0.000000" B="1.000000" Alpha="1.000000" BlendFactor="0.300000"/>
+				</Component>
+			</GameObject>
+			<GameObject name="ShowInputButton" layer="2" active="1" tag="Common">
+				<Component name="RectTransform" Width="97.500000" Height="49.250000" PivotType="1">
+					<Vector3 x="0.000000" y="0.000000" z="0.000000">LocalPosition</Vector3>
+					<Quaternion x="0.000000" y="0.000000" z="0.000000" w="1.000000">LocalRotation</Quaternion>
+					<Vector3 x="1.000000" y="1.000000" z="1.000000">LocalScale</Vector3>
+					<Vector2 x="0.000000" y="305.000000">Pivot</Vector2>
+				</Component>
+				<Component name="Button" MeshName="Image" ShaderName="ui" TextureName="Tutorial_en">
+					<Color R="1.000000" G="0.000000" B="1.000000" Alpha="1.000000" BlendFactor="0.300000"/>
+				</Component>
+			</GameObject>
+			<GameObject name="SelectTankText" layer="2" active="1" tag="Common">
+				<Component name="RectTransform" Width="105.000000" Height="100.000000" PivotType="4">
+					<Vector3 x="0.000000" y="0.000000" z="0.000000">LocalPosition</Vector3>
+					<Quaternion x="0.000000" y="0.000000" z="0.000000" w="1.000000">LocalRotation</Quaternion>
+					<Vector3 x="1.000000" y="1.000000" z="1.000000">LocalScale</Vector3>
+					<Vector2 x="-120.000000" y="-250.000000">Pivot</Vector2>
+				</Component>
+				<Component name="TextTGUI" MeshName="Image" ShaderName="" TextureName="" Text="按左右键切换坦克" FontScaleX="1.000000" FontScaleY="1.000000">
+					<Color R="1.000000" G="0.000000" B="0.000000" Alpha="1.000000" BlendFactor="1.000000"/>
+				</Component>
+			</GameObject>
+			<GameObject name="FPSText" layer="2" active="1" tag="Common">
+				<Component name="RectTransform" Width="100.000000" Height="100.000000" PivotType="4">
+					<Vector3 x="0.000000" y="0.000000" z="0.000000">LocalPosition</Vector3>
+					<Quaternion x="0.000000" y="0.000000" z="0.000000" w="1.000000">LocalRotation</Quaternion>
+					<Vector3 x="1.000000" y="1.000000" z="1.000000">LocalScale</Vector3>
+					<Vector2 x="-888.000000" y="-481.000000">Pivot</Vector2>
+				</Component>
+				<Component name="TextTGUI" MeshName="Image" ShaderName="" TextureName="" Text="FPS:10.3333" FontScaleX="1.000000" FontScaleY="1.000000">
+					<Color R="1.000000" G="1.000000" B="0.990000" Alpha="1.000000" BlendFactor="0.000000"/>
+				</Component>
+			</GameObject>
+			<GameObject name="Title" layer="2" active="1" tag="Common">
+				<Component name="RectTransform" Width="1000.000000" Height="500.000000" PivotType="4">
+					<Vector3 x="0.000000" y="0.000000" z="0.000000">LocalPosition</Vector3>
+					<Quaternion x="0.000000" y="0.000000" z="0.000000" w="1.000000">LocalRotation</Quaternion>
+					<Vector3 x="1.000000" y="1.000000" z="1.000000">LocalScale</Vector3>
+					<Vector2 x="0.000000" y="-250.000000">Pivot</Vector2>
+				</Component>
+				<Component name="ImageTGUI" MeshName="Image" ShaderName="ui" TextureName="Title">
+					<Color R="0.000000" G="0.000000" B="0.000000" Alpha="1.000000" BlendFactor="0.000000"/>
+				</Component>
+			</GameObject>
+			<GameObject name="RankListButton" layer="2" active="1" tag="Common">
+				<Component name="RectTransform" Width="97.500000" Height="49.250000" PivotType="4">
+					<Vector3 x="0.000000" y="0.000000" z="0.000000">LocalPosition</Vector3>
+					<Quaternion x="0.000000" y="0.000000" z="0.000000" w="1.000000">LocalRotation</Quaternion>
+					<Vector3 x="1.000000" y="1.000000" z="1.000000">LocalScale</Vector3>
+					<Vector2 x="0.000000" y="424.000000">Pivot</Vector2>
+				</Component>
+				<Component name="Button" MeshName="Image" ShaderName="ui" TextureName="RankListButton_en">
+					<Color R="1.000000" G="0.000000" B="1.000000" Alpha="1.000000" BlendFactor="0.300000"/>
+				</Component>
+			</GameObject>
+			<GameObject name="Input" layer="2" active="0" tag="Common">
+				<Component name="RectTransform" Width="1500.000000" Height="900.000000" PivotType="4">
+					<Vector3 x="0.000000" y="0.000000" z="0.000000">LocalPosition</Vector3>
+					<Quaternion x="0.000000" y="0.000000" z="0.000000" w="1.000000">LocalRotation</Quaternion>
+					<Vector3 x="1.000000" y="1.000000" z="1.000000">LocalScale</Vector3>
+					<Vector2 x="0.000000" y="0.000000">Pivot</Vector2>
+				</Component>
+				<Component name="ImageTGUI" MeshName="Image" ShaderName="ui" TextureName="PS4_en">
+					<Color R="0.000000" G="0.000000" B="0.000000" Alpha="1.000000" BlendFactor="0.000000"/>
+				</Component>
+			</GameObject>
+			<GameObject name="RankList" layer="2" active="0" tag="Common">
+				<Component name="RectTransform" Width="700.000000" Height="800.000000" PivotType="4">
+					<Vector3 x="0.000000" y="0.000000" z="0.000000">LocalPosition</Vector3>
+					<Quaternion x="0.000000" y="0.000000" z="0.000000" w="1.000000">LocalRotation</Quaternion>
+					<Vector3 x="1.000000" y="1.000000" z="1.000000">LocalScale</Vector3>
+					<Vector2 x="0.000000" y="1.000000">Pivot</Vector2>
+				</Component>
+				<Component name="ImageTGUI" MeshName="Image" ShaderName="ui" TextureName="DefaultImage">
+					<Color R="1.000000" G="0.300000" B="0.300000" Alpha="1.000000" BlendFactor="1.000000"/>
+				</Component>
+				<GameObject name="RankListTitleText" layer="2" active="1" tag="Common">
+					<Component name="RectTransform" Width="102.000000" Height="100.000000" PivotType="4">
+						<Vector3 x="0.000000" y="0.000000" z="0.000000">LocalPosition</Vector3>
+						<Quaternion x="0.000000" y="0.000000" z="0.000000" w="1.000000">LocalRotation</Quaternion>
+						<Vector3 x="1.000000" y="1.000000" z="1.000000">LocalScale</Vector3>
+						<Vector2 x="-127.000000" y="-362.000000">Pivot</Vector2>
+					</Component>
+					<Component name="TextTGUI" MeshName="Image" ShaderName="" TextureName="" Text="排行榜 RankList" FontScaleX="1.000000" FontScaleY="1.000000">
+						<Color R="0.000000" G="0.000000" B="-0.060000" Alpha="1.000000" BlendFactor="0.000000"/>
+					</Component>
+				</GameObject>
+				<GameObject name="RankText" layer="2" active="1" tag="Common">
+					<Component name="RectTransform" Width="102.000000" Height="100.000000" PivotType="4">
+						<Vector3 x="0.000000" y="0.000000" z="0.000000">LocalPosition</Vector3>
+						<Quaternion x="0.000000" y="0.000000" z="0.000000" w="1.000000">LocalRotation</Quaternion>
+						<Vector3 x="1.000000" y="1.000000" z="1.000000">LocalScale</Vector3>
+						<Vector2 x="-300.000000" y="-300.000000">Pivot</Vector2>
+					</Component>
+					<Component name="TextTGUI" MeshName="Image" ShaderName="" TextureName="" Text="Rank" FontScaleX="0.900000" FontScaleY="0.900000">
+						<Color R="0.000000" G="0.000000" B="0.000000" Alpha="1.000000" BlendFactor="0.000000"/>
+					</Component>
+				</GameObject>
+				<GameObject name="ScoreText" layer="2" active="1" tag="Common">
+					<Component name="RectTransform" Width="100.000000" Height="100.000000" PivotType="4">
+						<Vector3 x="0.000000" y="0.000000" z="0.000000">LocalPosition</Vector3>
+						<Quaternion x="0.000000" y="0.000000" z="0.000000" w="1.000000">LocalRotation</Quaternion>
+						<Vector3 x="1.000000" y="1.000000" z="1.000000">LocalScale</Vector3>
+						<Vector2 x="-85.000000" y="-300.000000">Pivot</Vector2>
+					</Component>
+					<Component name="TextTGUI" MeshName="Image" ShaderName="" TextureName="" Text="Score" FontScaleX="0.900000" FontScaleY="0.900000">
+						<Color R="0.000000" G="0.000000" B="0.000000" Alpha="1.000000" BlendFactor="0.000000"/>
+					</Component>
+				</GameObject>
+				<GameObject name="TimeText" layer="2" active="1" tag="Common">
+					<Component name="RectTransform" Width="103.000000" Height="100.000000" PivotType="4">
+						<Vector3 x="0.000000" y="0.000000" z="0.000000">LocalPosition</Vector3>
+						<Quaternion x="0.000000" y="0.000000" z="0.000000" w="1.000000">LocalRotation</Quaternion>
+						<Vector3 x="1.000000" y="1.000000" z="1.000000">LocalScale</Vector3>
+						<Vector2 x="171.000000" y="-300.000000">Pivot</Vector2>
+					</Component>
+					<Component name="TextTGUI" MeshName="Image" ShaderName="" TextureName="" Text="Time" FontScaleX="0.900000" FontScaleY="0.900000">
+						<Color R="0.000000" G="-0.010000" B="0.000000" Alpha="1.000000" BlendFactor="0.000000"/>
+					</Component>
+				</GameObject>
+				<GameObject name="RankTextRanks" layer="2" active="1" tag="Common">
+					<Component name="RectTransform" Width="101.000000" Height="100.000000" PivotType="4">
+						<Vector3 x="0.000000" y="0.000000" z="0.000000">LocalPosition</Vector3>
+						<Quaternion x="0.000000" y="0.000000" z="0.000000" w="1.000000">LocalRotation</Quaternion>
+						<Vector3 x="1.000000" y="1.000000" z="1.000000">LocalScale</Vector3>
+						<Vector2 x="-285.000000" y="-250.000000">Pivot</Vector2>
+					</Component>
+					<Component name="TextTGUI" MeshName="Image" ShaderName="" TextureName="" Text=" 1
+
+ 2
+
+ 3
+
+ 4
+
+ 5
+
+ 6
+
+ 7
+
+ 8
+ 
+ 9
+ 
+10" FontScaleX="0.800000" FontScaleY="0.800000">
+						<Color R="0.000000" G="0.000000" B="0.000000" Alpha="1.000000" BlendFactor="0.000000"/>
+					</Component>
+				</GameObject>
+				<GameObject name="ScoreTextScores" layer="2" active="1" tag="Common">
+					<Component name="RectTransform" Width="102.000000" Height="100.000000" PivotType="4">
+						<Vector3 x="0.000000" y="0.000000" z="0.000000">LocalPosition</Vector3>
+						<Quaternion x="0.000000" y="0.000000" z="0.000000" w="1.000000">LocalRotation</Quaternion>
+						<Vector3 x="1.000000" y="1.000000" z="1.000000">LocalScale</Vector3>
+						<Vector2 x="-80.000000" y="-255.000000">Pivot</Vector2>
+					</Component>
+					<Component name="TextTGUI" MeshName="Image" ShaderName="" TextureName="" Text="9999
+
+
+
+
+
+9999
+
+
+
+
+
+9999
+
+
+
+
+
+9999
+
+
+
+
+
+9999
+
+
+
+
+
+9999
+
+
+
+
+
+9999
+
+
+
+
+
+9999
+
+
+
+
+
+9999
+
+
+
+
+
+9999" FontScaleX="0.800000" FontScaleY="0.800000">
+						<Color R="0.000000" G="0.000000" B="0.000000" Alpha="1.000000" BlendFactor="0.000000"/>
+					</Component>
+				</GameObject>
+				<GameObject name="TimeTextTimes" layer="2" active="1" tag="Common">
+					<Component name="RectTransform" Width="100.000000" Height="100.000000" PivotType="4">
+						<Vector3 x="0.000000" y="0.000000" z="0.000000">LocalPosition</Vector3>
+						<Quaternion x="0.000000" y="0.000000" z="0.000000" w="1.000000">LocalRotation</Quaternion>
+						<Vector3 x="1.000000" y="1.000000" z="1.000000">LocalScale</Vector3>
+						<Vector2 x="140.000000" y="-258.000000">Pivot</Vector2>
+					</Component>
+					<Component name="TextTGUI" MeshName="Image" ShaderName="" TextureName="" Text="99: 99: 99
+
+
+
+
+
+99: 99: 99
+
+
+
+
+
+99: 99: 99
+
+
+
+
+
+99: 99: 99
+
+
+
+
+
+99: 99: 99
+
+
+
+
+
+99: 99: 99
+
+
+
+
+
+99: 99: 99
+
+
+
+
+
+99: 99: 99
+
+
+
+
+
+99: 99: 99
+
+
+
+
+
+99: 99: 99" FontScaleX="0.800000" FontScaleY="0.800000">
+						<Color R="0.000000" G="0.000000" B="0.000000" Alpha="1.000000" BlendFactor="0.000000"/>
+					</Component>
+				</GameObject>
+			</GameObject>
+		</GameObject>
+	</GameObject>
+	<FileManager NeedAsync="1">
+		<BolbFile/>
+		<Meshes>
+			<File name="CommonTrack" path="Mesh/CommonTrack.obj"/>
+			<File name="TankTrack_L" path="Mesh/TankTrack_L.OBJ"/>
+			<File name="DefaultCube" path="Mesh/DefaultCube.OBJ"/>
+			<File name="Cube" path="Mesh/DefaultCube.OBJ"/>
+			<File name="Image" path="Mesh/Image.OBJ"/>
+			<File name="TankTrack_R" path="Mesh/TankTrack_R.OBJ"/>
+			<File name="AMBT_GUN" path="Mesh/AMBT_GUN.obj"/>
+			<File name="CommonBattery" path="Mesh/CommonBattery.obj"/>
+			<File name="TankBattery" path="Mesh/TankBattery.OBJ"/>
+			<File name="CommonBody" path="Mesh/CommonBody.obj"/>
+			<File name="AMBT_TURRET" path="Mesh/AMBT_TURRET.obj"/>
+			<File name="TankBatteryDestroy" path="Mesh/TankBatteryDestroy.OBJ"/>
+			<File name="TankBody" path="Mesh/TankBody.OBJ"/>
+			<File name="AMBT_TRACK" path="Mesh/AMBT_TRACK.obj"/>
+			<File name="TankBodyDestroy" path="Mesh/TankBodyDestroy.OBJ"/>
+			<File name="Shell" path="Mesh/Shell.OBJ"/>
+			<File name="AMBT_BODY" path="Mesh/AMBT_BODY.obj"/>
+		</Meshes>
+		<Textures>
+			<File name="TankinFont_38.tga" path="Fonts/GameplayFont/TankinFont_38.tga"/>
+			<File name="TankinFont_25.tga" path="Fonts/GameplayFont/TankinFont_25.tga"/>
+			<File name="NewGame" path="Texture/UI/NewGame.tga"/>
+			<File name="TankinFont_69.tga" path="Fonts/GameplayFont/TankinFont_69.tga"/>
+			<File name="RankListButton_ch" path="Texture/UI/RankListButton_ch.tga"/>
+			<File name="TankinFont_41.tga" path="Fonts/GameplayFont/TankinFont_41.tga"/>
+			<File name="TankinFont_05.tga" path="Fonts/GameplayFont/TankinFont_05.tga"/>
+			<File name="TankinFont_42.tga" path="Fonts/GameplayFont/TankinFont_42.tga"/>
+			<File name="TankinFont_46.tga" path="Fonts/GameplayFont/TankinFont_46.tga"/>
+			<File name="TankinFont_19.tga" path="Fonts/GameplayFont/TankinFont_19.tga"/>
+			<File name="TankinFont_64.tga" path="Fonts/GameplayFont/TankinFont_64.tga"/>
+			<File name="LoadGame" path="Texture/UI/LoadGame.tga"/>
+			<File name="TankinFont_29.tga" path="Fonts/GameplayFont/TankinFont_29.tga"/>
+			<File name="ChangeLanguage_en" path="Texture/UI/ChangeLanguage_en.tga"/>
+			<File name="TankinFont_58.tga" path="Fonts/GameplayFont/TankinFont_58.tga"/>
+			<File name="TankTex" path="Texture/TankTex.tga"/>
+			<File name="TankinFont_22.tga" path="Fonts/GameplayFont/TankinFont_22.tga"/>
+			<File name="TankinFont_53.tga" path="Fonts/GameplayFont/TankinFont_53.tga"/>
+			<File name="PS4_ch" path="Texture/UI/PS4_ch.tga"/>
+			<File name="HP_B" path="Texture/HP_B.tga"/>
+			<File name="TankinFont_33.tga" path="Fonts/GameplayFont/TankinFont_33.tga"/>
+			<File name="TankinFont_60.tga" path="Fonts/GameplayFont/TankinFont_60.tga"/>
+			<File name="TankinFont_12.tga" path="Fonts/GameplayFont/TankinFont_12.tga"/>
+			<File name="TankinFont_43.tga" path="Fonts/GameplayFont/TankinFont_43.tga"/>
+			<File name="TankinFont_24.tga" path="Fonts/GameplayFont/TankinFont_24.tga"/>
+			<File name="HP_R" path="Texture/HP_R.tga"/>
+			<File name="TankinFont_00.tga" path="Fonts/GameplayFont/TankinFont_00.tga"/>
+			<File name="TankinFont_16.tga" path="Fonts/GameplayFont/TankinFont_16.tga"/>
+			<File name="TankinFont_49.tga" path="Fonts/GameplayFont/TankinFont_49.tga"/>
+			<File name="TankinFont_34.tga" path="Fonts/GameplayFont/TankinFont_34.tga"/>
+			<File name="TankinFont_26.tga" path="Fonts/GameplayFont/TankinFont_26.tga"/>
+			<File name="TankinFont_57.tga" path="Fonts/GameplayFont/TankinFont_57.tga"/>
+			<File name="TankinFont_40.tga" path="Fonts/GameplayFont/TankinFont_40.tga"/>
+			<File name="TankinFont_63.tga" path="Fonts/GameplayFont/TankinFont_63.tga"/>
+			<File name="TankinFont_62.tga" path="Fonts/GameplayFont/TankinFont_62.tga"/>
+			<File name="TankinFont_31.tga" path="Fonts/GameplayFont/TankinFont_31.tga"/>
+			<File name="TankinFont_48.tga" path="Fonts/GameplayFont/TankinFont_48.tga"/>
+			<File name="TankinFont_17.tga" path="Fonts/GameplayFont/TankinFont_17.tga"/>
+			<File name="ChangeLanguage_ch" path="Texture/UI/ChangeLanguage_ch.tga"/>
+			<File name="TankinFont_52.tga" path="Fonts/GameplayFont/TankinFont_52.tga"/>
+			<File name="TankinFont_23.tga" path="Fonts/GameplayFont/TankinFont_23.tga"/>
+			<File name="TankinFont_59.tga" path="Fonts/GameplayFont/TankinFont_59.tga"/>
+			<File name="TankinFont_28.tga" path="Fonts/GameplayFont/TankinFont_28.tga"/>
+			<File name="TankinFont_51.tga" path="Fonts/GameplayFont/TankinFont_51.tga"/>
+			<File name="TankinFont_20.tga" path="Fonts/GameplayFont/TankinFont_20.tga"/>
+			<File name="TankinFont_09.tga" path="Fonts/GameplayFont/TankinFont_09.tga"/>
+			<File name="TankinFont_08.tga" path="Fonts/GameplayFont/TankinFont_08.tga"/>
+			<File name="TankinFont_68.tga" path="Fonts/GameplayFont/TankinFont_68.tga"/>
+			<File name="TankTexDestroy" path="Texture/TankTexDestroy.tga"/>
+			<File name="TankinFont_44.tga" path="Fonts/GameplayFont/TankinFont_44.tga"/>
+			<File name="TankinFont_13.tga" path="Fonts/GameplayFont/TankinFont_13.tga"/>
+			<File name="TankinFont_02.tga" path="Fonts/GameplayFont/TankinFont_02.tga"/>
+			<File name="AMBT_GUN" path="Texture/ambt_guns_diffuse.tga"/>
+			<File name="TankinFont_14.tga" path="Fonts/GameplayFont/TankinFont_14.tga"/>
+			<File name="TankinFont_07.tga" path="Fonts/GameplayFont/TankinFont_07.tga"/>
+			<File name="TankinFont_36.tga" path="Fonts/GameplayFont/TankinFont_36.tga"/>
+			<File name="TankinFont_65.tga" path="Fonts/GameplayFont/TankinFont_65.tga"/>
+			<File name="Plane" path="Texture/Plane.tga"/>
+			<File name="TankinFont_01.tga" path="Fonts/GameplayFont/TankinFont_01.tga"/>
+			<File name="NewGame_ch" path="Texture/UI/NewGame_ch.tga"/>
+			<File name="TankinFont_50.tga" path="Fonts/GameplayFont/TankinFont_50.tga"/>
+			<File name="TankinFont_21.tga" path="Fonts/GameplayFont/TankinFont_21.tga"/>
+			<File name="TankinFont_56.tga" path="Fonts/GameplayFont/TankinFont_56.tga"/>
+			<File name="TankinFont_27.tga" path="Fonts/GameplayFont/TankinFont_27.tga"/>
+			<File name="AMBT_TURRET" path="Texture/ambt_turret_01_diffuse.tga"/>
+			<File name="TankinFont_04.tga" path="Fonts/GameplayFont/TankinFont_04.tga"/>
+			<File name="TankinFont_06.tga" path="Fonts/GameplayFont/TankinFont_06.tga"/>
+			<File name="TankinFont_30.tga" path="Fonts/GameplayFont/TankinFont_30.tga"/>
+			<File name="TankinFont_67.tga" path="Fonts/GameplayFont/TankinFont_67.tga"/>
+			<File name="Title" path="Texture/UI/Title.tga"/>
+			<File name="TankinFont_55.tga" path="Fonts/GameplayFont/TankinFont_55.tga"/>
+			<File name="Cai" path="Texture/UI/Cai.tga"/>
+			<File name="TankinFont_03.tga" path="Fonts/GameplayFont/TankinFont_03.tga"/>
+			<File name="TankinFont_66.tga" path="Fonts/GameplayFont/TankinFont_66.tga"/>
+			<File name="TankinFont_10.tga" path="Fonts/GameplayFont/TankinFont_10.tga"/>
+			<File name="TankinFont_35.tga" path="Fonts/GameplayFont/TankinFont_35.tga"/>
+			<File name="PS4_en" path="Texture/UI/PS4_en.tga"/>
+			<File name="Shell" path="Texture/Shell.tga"/>
+			<File name="TankinFont_39.tga" path="Fonts/GameplayFont/TankinFont_39.tga"/>
+			<File name="Container2" path="Texture/Container2.tga"/>
+			<File name="Tutorial_en" path="Texture/UI/Tutorial_en.tga"/>
+			<File name="TankinFont_45.tga" path="Fonts/GameplayFont/TankinFont_45.tga"/>
+			<File name="TankinFont_11.tga" path="Fonts/GameplayFont/TankinFont_11.tga"/>
+			<File name="PC_en" path="Texture/UI/PC_en.tga"/>
+			<File name="TankinFont_15.tga" path="Fonts/GameplayFont/TankinFont_15.tga"/>
+			<File name="TankTrack" path="Texture/TankTrack.tga"/>
+			<File name="NewGame_en" path="Texture/UI/NewGame_en.tga"/>
+			<File name="TankinFont_37.tga" path="Fonts/GameplayFont/TankinFont_37.tga"/>
+			<File name="PC_ch" path="Texture/UI/PC_ch.tga"/>
+			<File name="AMBT_TRACK" path="Texture/ambt_chassis_01_diffuse.tga"/>
+			<File name="TankinFont_54.tga" path="Fonts/GameplayFont/TankinFont_54.tga"/>
+			<File name="Tutorial_ch" path="Texture/UI/Tutorial_ch.tga"/>
+			<File name="DefaultImage" path="Texture/UI/DefaultImage.tga"/>
+			<File name="TankinFont_18.tga" path="Fonts/GameplayFont/TankinFont_18.tga"/>
+			<File name="TankinFont_47.tga" path="Fonts/GameplayFont/TankinFont_47.tga"/>
+			<File name="TankinFont_61.tga" path="Fonts/GameplayFont/TankinFont_61.tga"/>
+			<File name="RankListButton_en" path="Texture/UI/RankListButton_en.tga"/>
+			<File name="TankinFont_32.tga" path="Fonts/GameplayFont/TankinFont_32.tga"/>
+			<File name="AMBT_BODY" path="Texture/ambt-hull-01-diffuse.tga"/>
+		</Textures>
+		<Shaders>
+			<File name="ui" path="Shader/Source/ui.hlsl"/>
+			<File name="particle" path="Shader/Source/particle.hlsl"/>
+			<File name="font" path="Shader/Source/font.hlsl"/>
+			<File name="debug" path="Shader/Source/debug.hlsl"/>
+			<File name="opaque" path="Shader/Source/opaque.hlsl"/>
+		</Shaders>
+		<AudioClips>
+			<File name="destroy" path="Sound/destroyable_wooden_roof_00.wav"/>
+			<File name="subsachine_shot" path="Sound/subsachine_shot_02.wav"/>
+			<File name="airConditioner" path="Sound/air_conditioner_loop_01.wav"/>
+			<File name="ShellBoom" path="Sound/Distant Bomb 001.wav"/>
+			<File name="smallEngineLoop" path="Sound/Small Engine Loop.wav"/>
+			<File name="engine_weak" path="Sound/engine_weak.wav"/>
+			<File name="carDrivingLoop" path="Sound/Interior Car Driving Loop.wav"/>
+			<File name="fire" path="Sound/Nice Calm Bonfire Loop.wav"/>
+			<File name="BGM" path="Sound/BGM.wav"/>
+			<File name="DarkSouls3" path="Sound/DarkSouls3.wav"/>
+		</AudioClips>
+		<NecessaryFile need="0" NeedAsync="1"/>
+	</FileManager>
+</Scene>
+

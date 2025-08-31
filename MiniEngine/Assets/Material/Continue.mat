@@ -1,0 +1,3 @@
+<material shaderName="tank" shaderPath="Shader/Source/tank.hlsl">
+    <texture name="Continue" path="Texture/Button/Continue.tga"/>
+</material>

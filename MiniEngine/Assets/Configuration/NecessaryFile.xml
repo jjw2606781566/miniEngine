@@ -1,0 +1,17 @@
+﻿<NecessaryFile need="1" NeedAsync="1">
+    <BolbFile/>
+    <Meshes>
+        <File name="Image" path="Mesh/Image.OBJ"/>
+        <File name="Cube" path="Mesh/DefaultCube.OBJ"/>
+    </Meshes>
+    <Textures>
+        <File name="DefaultImage" path="Texture/UI/DefaultImage.tga"/>
+        <File name="logo" path="Texture/UI/logo.tga"/>
+    </Textures>
+    <Shaders>
+        <File name="ui" path="Shader/Source/ui.hlsl"/>
+        <File name="debug" path="Shader/Source/debug.hlsl"/>
+    </Shaders>
+    <AudioClips>
+    </AudioClips>
+</NecessaryFile>

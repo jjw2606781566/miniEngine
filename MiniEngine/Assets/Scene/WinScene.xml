@@ -1,0 +1,218 @@
+<Scene>
+	<GameObject name="Root" layer="0" active="1" tag="Common">
+		<Component name="Transform">
+			<Vector3 x="0.000000" y="0.000000" z="0.000000">LocalPosition</Vector3>
+			<Quaternion x="0.000000" y="0.000000" z="0.000000" w="1.000000">LocalRotation</Quaternion>
+			<Vector3 x="1.000000" y="1.000000" z="1.000000">LocalScale</Vector3>
+		</Component>
+		<GameObject name="MainCamera" layer="1" active="0" tag="Common">
+			<Component name="Transform">
+				<Vector3 x="-0.376542" y="7.727401" z="-8.757280">LocalPosition</Vector3>
+				<Quaternion x="0.047010" y="-0.058874" z="0.000825" w="0.997158">LocalRotation</Quaternion>
+				<Vector3 x="1.000000" y="1.000000" z="1.000000">LocalScale</Vector3>
+			</Component>
+			<Component name="CameraController"/>
+			<Component name="Camera" CameraType="0" Depth="0" isMainCamera="1" RenderLayer="255">
+				<CameraParameter FOV="1.047197" Aspect="1.777778" Width="0.000000" Height="0.000000" NearClip="0.100000" FarClip="1000.000000"/>
+			</Component>
+		</GameObject>
+		<GameObject name="UIMainCamera" layer="1" active="1" tag="Common">
+			<Component name="Transform">
+				<Vector3 x="1000.000000" y="360.000000" z="-110.000000">LocalPosition</Vector3>
+				<Quaternion x="0.000000" y="0.000000" z="0.000000" w="1.000000">LocalRotation</Quaternion>
+				<Vector3 x="1.000000" y="1.000000" z="1.000000">LocalScale</Vector3>
+			</Component>
+			<Component name="Camera" CameraType="1" Depth="1" isMainCamera="1" RenderLayer="2">
+				<CameraParameter FOV="0.000000" Aspect="0.000000" Width="1920.000000" Height="1080.000000" NearClip="0.100000" FarClip="100.000000"/>
+			</Component>
+		</GameObject>
+		<GameObject name="UICamera" layer="1" active="1" tag="Common">
+			<Component name="Transform">
+				<Vector3 x="1000.000000" y="360.000000" z="-110.000000">LocalPosition</Vector3>
+				<Quaternion x="0.000000" y="0.000000" z="0.000000" w="1.000000">LocalRotation</Quaternion>
+				<Vector3 x="1.000000" y="1.000000" z="1.000000">LocalScale</Vector3>
+			</Component>
+			<Component name="Camera" CameraType="1" Depth="1" isMainCamera="0" RenderLayer="2">
+				<CameraParameter FOV="0.000000" Aspect="0.000000" Width="1920.000000" Height="1080.000000" NearClip="0.100000" FarClip="100.000000"/>
+			</Component>
+		</GameObject>
+		<GameObject name="Canvas" layer="1" active="1" tag="Common">
+			<Component name="Transform">
+				<Vector3 x="1000.000000" y="360.000000" z="-100.000000">LocalPosition</Vector3>
+				<Quaternion x="0.000000" y="1.000000" z="0.000000" w="0.000000">LocalRotation</Quaternion>
+				<Vector3 x="1.000000" y="1.000000" z="1.000000">LocalScale</Vector3>
+			</Component>
+			<Component name="Canvas" Width="1920" Height="1080"/>
+			<Component name="EndUIController"/>
+			<GameObject name="Image" layer="2" active="1" tag="Common">
+				<Component name="RectTransform" Width="1920.000000" Height="1080.000000" PivotType="4">
+					<Vector3 x="0.000000" y="0.000000" z="0.000000">LocalPosition</Vector3>
+					<Quaternion x="0.000000" y="0.000000" z="0.000000" w="1.000000">LocalRotation</Quaternion>
+					<Vector3 x="1.000000" y="1.000000" z="1.000000">LocalScale</Vector3>
+					<Vector2 x="0.000000" y="0.000000">Pivot</Vector2>
+				</Component>
+				<Component name="ImageTGUI" MeshName="Image" ShaderName="ui" TextureName="DefaultImage">
+					<Color R="0.000000" G="0.000000" B="0.000000" Alpha="1.000000" BlendFactor="1.000000"/>
+				</Component>
+			</GameObject>
+			<GameObject name="ContinueTextEng" layer="2" active="1" tag="Common">
+				<Component name="RectTransform" Width="101.000000" Height="101.000000" PivotType="4">
+					<Vector3 x="0.000000" y="0.000000" z="0.000000">LocalPosition</Vector3>
+					<Quaternion x="0.000000" y="0.000000" z="0.000000" w="1.000000">LocalRotation</Quaternion>
+					<Vector3 x="1.000000" y="1.000000" z="1.000000">LocalScale</Vector3>
+					<Vector2 x="-175.000000" y="301.000000">Pivot</Vector2>
+				</Component>
+				<Component name="TextTGUI" MeshName="Image" ShaderName="" TextureName="" Text="Press any key to continue" FontScaleX="1.000000" FontScaleY="1.000000">
+					<Color R="1.000000" G="0.000000" B="0.000000" Alpha="1.000000" BlendFactor="1.000000"/>
+				</Component>
+			</GameObject>
+			<GameObject name="Cai" layer="2" active="1" tag="Common">
+				<Component name="RectTransform" Width="480.000000" Height="600.000000" PivotType="4">
+					<Vector3 x="0.000000" y="0.000000" z="0.000000">LocalPosition</Vector3>
+					<Quaternion x="0.000000" y="0.000000" z="0.000000" w="1.000000">LocalRotation</Quaternion>
+					<Vector3 x="1.000000" y="1.000000" z="1.000000">LocalScale</Vector3>
+					<Vector2 x="20.000000" y="-74.000000">Pivot</Vector2>
+				</Component>
+				<Component name="ImageTGUI" MeshName="Image" ShaderName="ui" TextureName="Win">
+					<Color R="0.000000" G="0.000000" B="0.000000" Alpha="1.000000" BlendFactor="0.000000"/>
+				</Component>
+			</GameObject>
+		</GameObject>
+	</GameObject>
+	<FileManager NeedAsync="1">
+		<BolbFile/>
+		<Meshes>
+			<File name="Image" path="Mesh/Image.OBJ"/>
+			<File name="CommonBody" path="Mesh/CommonBody.obj"/>
+			<File name="Cube" path="Mesh/DefaultCube.OBJ"/>
+			<File name="TankTrack_R" path="Mesh/TankTrack_R.OBJ"/>
+			<File name="TankTrack_L" path="Mesh/TankTrack_L.OBJ"/>
+			<File name="DefaultCube" path="Mesh/DefaultCube.OBJ"/>
+			<File name="CommonTrack" path="Mesh/CommonTrack.obj"/>
+			<File name="AMBT_GUN" path="Mesh/AMBT_GUN.obj"/>
+			<File name="TankBody" path="Mesh/TankBody.OBJ"/>
+			<File name="AMBT_TURRET" path="Mesh/AMBT_TURRET.obj"/>
+			<File name="AMBT_TRACK" path="Mesh/AMBT_TRACK.obj"/>
+			<File name="TankBatteryDestroy" path="Mesh/TankBatteryDestroy.OBJ"/>
+			<File name="CommonBattery" path="Mesh/CommonBattery.obj"/>
+			<File name="TankBattery" path="Mesh/TankBattery.OBJ"/>
+			<File name="TankBodyDestroy" path="Mesh/TankBodyDestroy.OBJ"/>
+			<File name="Shell" path="Mesh/Shell.OBJ"/>
+			<File name="AMBT_BODY" path="Mesh/AMBT_BODY.obj"/>
+		</Meshes>
+		<Textures>
+			<File name="TankinFont_42.tga" path="Fonts/GameplayFont/TankinFont_42.tga"/>
+			<File name="HP_B" path="Texture/HP_B.tga"/>
+			<File name="TankinFont_33.tga" path="Fonts/GameplayFont/TankinFont_33.tga"/>
+			<File name="TankinFont_60.tga" path="Fonts/GameplayFont/TankinFont_60.tga"/>
+			<File name="TankinFont_12.tga" path="Fonts/GameplayFont/TankinFont_12.tga"/>
+			<File name="TankinFont_30.tga" path="Fonts/GameplayFont/TankinFont_30.tga"/>
+			<File name="TankinFont_23.tga" path="Fonts/GameplayFont/TankinFont_23.tga"/>
+			<File name="TankinFont_05.tga" path="Fonts/GameplayFont/TankinFont_05.tga"/>
+			<File name="TankinFont_69.tga" path="Fonts/GameplayFont/TankinFont_69.tga"/>
+			<File name="TankinFont_22.tga" path="Fonts/GameplayFont/TankinFont_22.tga"/>
+			<File name="TankinFont_53.tga" path="Fonts/GameplayFont/TankinFont_53.tga"/>
+			<File name="TankinFont_27.tga" path="Fonts/GameplayFont/TankinFont_27.tga"/>
+			<File name="TankinFont_56.tga" path="Fonts/GameplayFont/TankinFont_56.tga"/>
+			<File name="TankinFont_32.tga" path="Fonts/GameplayFont/TankinFont_32.tga"/>
+			<File name="DefaultImage" path="Texture/UI/DefaultImage.tga"/>
+			<File name="TankinFont_25.tga" path="Fonts/GameplayFont/TankinFont_25.tga"/>
+			<File name="TankinFont_54.tga" path="Fonts/GameplayFont/TankinFont_54.tga"/>
+			<File name="TankinFont_43.tga" path="Fonts/GameplayFont/TankinFont_43.tga"/>
+			<File name="NewGame_en" path="Texture/UI/NewGame_en.tga"/>
+			<File name="TankinFont_29.tga" path="Fonts/GameplayFont/TankinFont_29.tga"/>
+			<File name="ChangeLanguage_en" path="Texture/UI/ChangeLanguage_en.tga"/>
+			<File name="TankinFont_58.tga" path="Fonts/GameplayFont/TankinFont_58.tga"/>
+			<File name="NewGame" path="Texture/UI/NewGame.tga"/>
+			<File name="TankTrack" path="Texture/TankTrack.tga"/>
+			<File name="TankinFont_34.tga" path="Fonts/GameplayFont/TankinFont_34.tga"/>
+			<File name="TankinFont_24.tga" path="Fonts/GameplayFont/TankinFont_24.tga"/>
+			<File name="TankinFont_00.tga" path="Fonts/GameplayFont/TankinFont_00.tga"/>
+			<File name="TankinFont_41.tga" path="Fonts/GameplayFont/TankinFont_41.tga"/>
+			<File name="TankinFont_49.tga" path="Fonts/GameplayFont/TankinFont_49.tga"/>
+			<File name="TankinFont_57.tga" path="Fonts/GameplayFont/TankinFont_57.tga"/>
+			<File name="TankinFont_26.tga" path="Fonts/GameplayFont/TankinFont_26.tga"/>
+			<File name="TankinFont_40.tga" path="Fonts/GameplayFont/TankinFont_40.tga"/>
+			<File name="TankinFont_31.tga" path="Fonts/GameplayFont/TankinFont_31.tga"/>
+			<File name="TankinFont_62.tga" path="Fonts/GameplayFont/TankinFont_62.tga"/>
+			<File name="TankinFont_48.tga" path="Fonts/GameplayFont/TankinFont_48.tga"/>
+			<File name="TankinFont_17.tga" path="Fonts/GameplayFont/TankinFont_17.tga"/>
+			<File name="ChangeLanguage_ch" path="Texture/UI/ChangeLanguage_ch.tga"/>
+			<File name="TankinFont_59.tga" path="Fonts/GameplayFont/TankinFont_59.tga"/>
+			<File name="TankinFont_28.tga" path="Fonts/GameplayFont/TankinFont_28.tga"/>
+			<File name="TankinFont_66.tga" path="Fonts/GameplayFont/TankinFont_66.tga"/>
+			<File name="TankinFont_35.tga" path="Fonts/GameplayFont/TankinFont_35.tga"/>
+			<File name="TankinFont_09.tga" path="Fonts/GameplayFont/TankinFont_09.tga"/>
+			<File name="TankinFont_51.tga" path="Fonts/GameplayFont/TankinFont_51.tga"/>
+			<File name="TankinFont_20.tga" path="Fonts/GameplayFont/TankinFont_20.tga"/>
+			<File name="TankinFont_19.tga" path="Fonts/GameplayFont/TankinFont_19.tga"/>
+			<File name="TankinFont_46.tga" path="Fonts/GameplayFont/TankinFont_46.tga"/>
+			<File name="TankinFont_47.tga" path="Fonts/GameplayFont/TankinFont_47.tga"/>
+			<File name="TankinFont_18.tga" path="Fonts/GameplayFont/TankinFont_18.tga"/>
+			<File name="TankinFont_44.tga" path="Fonts/GameplayFont/TankinFont_44.tga"/>
+			<File name="TankinFont_08.tga" path="Fonts/GameplayFont/TankinFont_08.tga"/>
+			<File name="TankinFont_15.tga" path="Fonts/GameplayFont/TankinFont_15.tga"/>
+			<File name="Plane" path="Texture/Plane.tga"/>
+			<File name="TankinFont_01.tga" path="Fonts/GameplayFont/TankinFont_01.tga"/>
+			<File name="TankinFont_38.tga" path="Fonts/GameplayFont/TankinFont_38.tga"/>
+			<File name="TankinFont_39.tga" path="Fonts/GameplayFont/TankinFont_39.tga"/>
+			<File name="TankinFont_68.tga" path="Fonts/GameplayFont/TankinFont_68.tga"/>
+			<File name="TankinFont_13.tga" path="Fonts/GameplayFont/TankinFont_13.tga"/>
+			<File name="TankinFont_14.tga" path="Fonts/GameplayFont/TankinFont_14.tga"/>
+			<File name="TankinFont_11.tga" path="Fonts/GameplayFont/TankinFont_11.tga"/>
+			<File name="TankinFont_65.tga" path="Fonts/GameplayFont/TankinFont_65.tga"/>
+			<File name="TankinFont_36.tga" path="Fonts/GameplayFont/TankinFont_36.tga"/>
+			<File name="TankinFont_02.tga" path="Fonts/GameplayFont/TankinFont_02.tga"/>
+			<File name="AMBT_GUN" path="Texture/ambt_guns_diffuse.tga"/>
+			<File name="TankinFont_07.tga" path="Fonts/GameplayFont/TankinFont_07.tga"/>
+			<File name="TankinFont_21.tga" path="Fonts/GameplayFont/TankinFont_21.tga"/>
+			<File name="NewGame_ch" path="Texture/UI/NewGame_ch.tga"/>
+			<File name="TankinFont_50.tga" path="Fonts/GameplayFont/TankinFont_50.tga"/>
+			<File name="TankinFont_04.tga" path="Fonts/GameplayFont/TankinFont_04.tga"/>
+			<File name="TankinFont_16.tga" path="Fonts/GameplayFont/TankinFont_16.tga"/>
+			<File name="TankinFont_06.tga" path="Fonts/GameplayFont/TankinFont_06.tga"/>
+			<File name="TankinFont_67.tga" path="Fonts/GameplayFont/TankinFont_67.tga"/>
+			<File name="Title" path="Texture/UI/Title.tga"/>
+			<File name="TankinFont_61.tga" path="Fonts/GameplayFont/TankinFont_61.tga"/>
+			<File name="LoadGame" path="Texture/UI/LoadGame.tga"/>
+			<File name="TankinFont_37.tga" path="Fonts/GameplayFont/TankinFont_37.tga"/>
+			<File name="AMBT_TURRET" path="Texture/ambt_turret_01_diffuse.tga"/>
+			<File name="TankinFont_64.tga" path="Fonts/GameplayFont/TankinFont_64.tga"/>
+			<File name="TankinFont_55.tga" path="Fonts/GameplayFont/TankinFont_55.tga"/>
+			<File name="HP_R" path="Texture/HP_R.tga"/>
+			<File name="Cai" path="Texture/UI/Cai.tga"/>
+			<File name="TankTexDestroy" path="Texture/TankTexDestroy.tga"/>
+			<File name="TankinFont_10.tga" path="Fonts/GameplayFont/TankinFont_10.tga"/>
+			<File name="TankinFont_63.tga" path="Fonts/GameplayFont/TankinFont_63.tga"/>
+			<File name="Shell" path="Texture/Shell.tga"/>
+			<File name="TankinFont_03.tga" path="Fonts/GameplayFont/TankinFont_03.tga"/>
+			<File name="Container2" path="Texture/Container2.tga"/>
+			<File name="TankTex" path="Texture/TankTex.tga"/>
+			<File name="TankinFont_45.tga" path="Fonts/GameplayFont/TankinFont_45.tga"/>
+			<File name="AMBT_BODY" path="Texture/ambt-hull-01-diffuse.tga"/>
+			<File name="TankinFont_52.tga" path="Fonts/GameplayFont/TankinFont_52.tga"/>
+			<File name="AMBT_TRACK" path="Texture/ambt_chassis_01_diffuse.tga"/>
+			<File name="Win" path="Texture/UI/Win.tga"/>
+		</Textures>
+		<Shaders>
+			<File name="particle" path="Shader/Source/particle.hlsl"/>
+			<File name="font" path="Shader/Source/font.hlsl"/>
+			<File name="debug" path="Shader/Source/debug.hlsl"/>
+			<File name="opaque" path="Shader/Source/opaque.hlsl"/>
+			<File name="ui" path="Shader/Source/ui.hlsl"/>
+		</Shaders>
+		<AudioClips>
+			<File name="destroy" path="Sound/destroyable_wooden_roof_00.wav"/>
+			<File name="subsachine_shot" path="Sound/subsachine_shot_02.wav"/>
+			<File name="airConditioner" path="Sound/air_conditioner_loop_01.wav"/>
+			<File name="ShellBoom" path="Sound/Distant Bomb 001.wav"/>
+			<File name="carDrivingLoop" path="Sound/Interior Car Driving Loop.wav"/>
+			<File name="smallEngineLoop" path="Sound/Small Engine Loop.wav"/>
+			<File name="engine_weak" path="Sound/engine_weak.wav"/>
+			<File name="fire" path="Sound/Nice Calm Bonfire Loop.wav"/>
+			<File name="DarkSouls3" path="Sound/DarkSouls3.wav"/>
+		</AudioClips>
+		<NecessaryFile need="0" NeedAsync="1"/>
+	</FileManager>
+</Scene>
+

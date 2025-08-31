@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35919.96
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MiniEngine", "MiniEngine\MiniEngine.vcxproj", "{3F395C1F-34D0-4184-92EB-8B9F1EC1BF60}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2F4CCF89-7649-4C7F-8CBF-F976B4FBC2B6} = {2F4CCF89-7649-4C7F-8CBF-F976B4FBC2B6}
+		{30A1B994-C2C6-485F-911B-FB4674366DA8} = {30A1B994-C2C6-485F-911B-FB4674366DA8}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ORBIS = Debug|ORBIS
+		Debug|x64 = Debug|x64
+		Release|ORBIS = Release|ORBIS
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3F395C1F-34D0-4184-92EB-8B9F1EC1BF60}.Debug|ORBIS.ActiveCfg = Debug|ORBIS
+		{3F395C1F-34D0-4184-92EB-8B9F1EC1BF60}.Debug|ORBIS.Build.0 = Debug|ORBIS
+		{3F395C1F-34D0-4184-92EB-8B9F1EC1BF60}.Debug|x64.ActiveCfg = Debug|x64
+		{3F395C1F-34D0-4184-92EB-8B9F1EC1BF60}.Debug|x64.Build.0 = Debug|x64
+		{3F395C1F-34D0-4184-92EB-8B9F1EC1BF60}.Release|ORBIS.ActiveCfg = Release|ORBIS
+		{3F395C1F-34D0-4184-92EB-8B9F1EC1BF60}.Release|ORBIS.Build.0 = Release|ORBIS
+		{3F395C1F-34D0-4184-92EB-8B9F1EC1BF60}.Release|x64.ActiveCfg = Release|x64
+		{3F395C1F-34D0-4184-92EB-8B9F1EC1BF60}.Release|x64.Build.0 = Release|x64
+		{30A1B994-C2C6-485F-911B-FB4674366DA8}.Debug|ORBIS.ActiveCfg = Debug|ORBIS
+		{30A1B994-C2C6-485F-911B-FB4674366DA8}.Debug|ORBIS.Build.0 = Debug|ORBIS
+		{30A1B994-C2C6-485F-911B-FB4674366DA8}.Debug|x64.ActiveCfg = Debug|x64
+		{30A1B994-C2C6-485F-911B-FB4674366DA8}.Release|ORBIS.ActiveCfg = Release|ORBIS
+		{30A1B994-C2C6-485F-911B-FB4674366DA8}.Release|ORBIS.Build.0 = Release|ORBIS
+		{30A1B994-C2C6-485F-911B-FB4674366DA8}.Release|x64.ActiveCfg = Release|ORBIS
+		{2F4CCF89-7649-4C7F-8CBF-F976B4FBC2B6}.Debug|ORBIS.ActiveCfg = Debug|ORBIS
+		{2F4CCF89-7649-4C7F-8CBF-F976B4FBC2B6}.Debug|ORBIS.Build.0 = Debug|ORBIS
+		{2F4CCF89-7649-4C7F-8CBF-F976B4FBC2B6}.Debug|x64.ActiveCfg = Debug|ORBIS
+		{2F4CCF89-7649-4C7F-8CBF-F976B4FBC2B6}.Release|ORBIS.ActiveCfg = Release|ORBIS
+		{2F4CCF89-7649-4C7F-8CBF-F976B4FBC2B6}.Release|ORBIS.Build.0 = Release|ORBIS
+		{2F4CCF89-7649-4C7F-8CBF-F976B4FBC2B6}.Release|x64.ActiveCfg = Release|ORBIS
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AAF64569-2D96-43E2-8994-E1A7542AFDB2}
+	EndGlobalSection
+EndGlobal

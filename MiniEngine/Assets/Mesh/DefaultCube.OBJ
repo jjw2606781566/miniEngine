@@ -1,0 +1,37 @@
+# List of geometric vertices, with (x, y, z) coordinates
+v -0.5 -0.5 -0.5
+v 0.5 -0.5 -0.5
+v 0.5 0.5 -0.5
+v -0.5 0.5 -0.5
+v -0.5 -0.5 0.5
+v 0.5 -0.5 0.5
+v 0.5 0.5 0.5
+v -0.5 0.5 0.5
+
+# List of texture coordinates, in (u, v) coordinates, with values between 0 and 1
+vt 0.0 0.0
+vt 1.0 0.0
+vt 1.0 1.0
+vt 0.0 1.0
+
+# List of vertex normals, in (x, y, z) form
+vn 0.0 0.0 -1.0
+vn 0.0 0.0 1.0
+vn 0.0 -1.0 0.0
+vn 0.0 1.0 0.0
+vn -1.0 0.0 0.0
+vn 1.0 0.0 0.0
+
+# Face definitions using triangles
+f 1/1/1 3/3/1 2/2/1
+f 1/1/1 4/4/1 3/3/1
+f 5/1/2 7/3/2 8/2/2
+f 5/1/2 6/4/2 7/3/2
+f 1/1/3 6/3/3 5/2/3
+f 1/1/3 2/4/3 6/3/3
+f 2/1/6 7/3/6 6/2/6
+f 2/1/6 3/4/6 7/3/6
+f 3/1/4 8/3/4 7/2/4
+f 3/1/4 4/4/4 8/3/4
+f 5/1/5 4/3/5 1/2/5
+f 5/1/5 8/4/5 4/3/5

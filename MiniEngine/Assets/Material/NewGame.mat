@@ -1,0 +1,3 @@
+<material shaderName="tank" shaderPath="Shader/Source/tank.hlsl">
+    <texture name="NewGame" path="Texture/Button/NewGame.tga"/>
+</material>

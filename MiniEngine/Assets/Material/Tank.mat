@@ -1,0 +1,3 @@
+<material shaderName="tank" shaderPath="Shader/Source/tank.hlsl">
+    <texture name="TankTex" path="Texture/TankTex.tga"/>
+</material>
